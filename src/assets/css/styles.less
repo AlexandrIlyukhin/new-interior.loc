@@ -1,18 +1,16 @@
-//@import (less) "normalize.less/normalize.less";
-//@import (less) 'normalize.css/normalize.css';
+@import (less) 'normalize.css/normalize.css';
 /*замораживаю для гитхаба 1*/
 //@import (less) 'photoswipe/dist/photoswipe.css';
 //@import (less) 'photoswipe/dist/default-skin/default-skin.css';
-//@import  './../node_modules/normalize.css/normalize.css';
-//@import 'owl.carousel2/dist/assets/owl.carousel.css';
+
 @import "project.less";
 @import "fonts.less";
 @import "smart-grid.less";
-//@import (less) 'owl.carousel2/dist/assets/owlcarousel/owl.carousel.min.css';
-//@import (less) 'owl.carousel2/dist/assets/owlcarousel/owl.theme.default.min.css';
-//@import (less) 'owl.carousel2/dist/assets/owl.carousel.min.css';
-//@import (less) 'owl.carousel2/dist/assets/owl.theme.default.min.css';
-//@import (less) 'animate.css/animate.min.css';
+
+
+@import (less) 'owl.carousel2/dist/assets/owl.carousel.min.css';
+@import (less) 'owl.carousel2/dist/assets/owl.theme.default.min.css';
+@import (less) 'animate.css/animate.min.css';
 /*замораживаю для гитхаба 3*/
 //@import  './../node_modules/photoswipe/dist/photoswipe.css';
 //@import  './../node_modules/photoswipe/dist/default-skin/default-skin.css';
@@ -685,12 +683,10 @@ h1 {
     }
     .btn-bloc {
       display: none;
-      margin: auto;
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-top: -25px;
-      margin-left: -64px;
+      margin: -25px auto auto -64px;
       .sm-block({ margin-top: -23px; margin-left: -55px; });
       z-index: 2;
       //vertical-align: middle;
@@ -764,13 +760,12 @@ h1 {
   .text-recommend {
     text-align: center;
     max-width: 630px;
-    margin: 0 auto;
     color: @color_grey;
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     font-size: 16px;
     line-height: 35px;
-    margin-top: 30px
+    margin: 30px auto 0;
   }
 
   .initials-title {
@@ -961,6 +956,7 @@ h1 {
         color: @color_grey;
       }
       .text {
+        display: inline-block;
         margin-top: 24px;
         font-family: 'Open Sans', sans-serif;
         font-weight: normal;
@@ -969,6 +965,7 @@ h1 {
         color: @color_grey;
       }
       .copyright {
+        display: block;
         margin-top: 40px;
         text-transform: uppercase;
         font-family: 'Open Sans', sans-serif;
@@ -996,7 +993,6 @@ h1 {
               padding-top: 0;
               font-family: 'Open Sans', sans-serif;
               font-weight: normal;
-              font-size: 12px;
               font-size-adjust: none;
               line-height: 22px;
             }
@@ -1032,12 +1028,12 @@ h1 {
             text-decoration: none;
             color: @color_grey;
             .sailing-title {
+              display: inline-block;
               font-size: 12px;
               text-transform: uppercase;
               padding-top: 0;
               font-family: 'Open Sans', sans-serif;
               font-weight: normal;
-              font-size: 12px;
               font-size-adjust: none;
               line-height: 1.40;
               letter-spacing: 0em;
