@@ -1,13 +1,13 @@
-@import (less) 'normalize.css/normalize.css';
+//@import (less) 'normalize.css/normalize.css';
 /*замораживаю для гитхаба 1*/
 //@import (less) 'photoswipe/dist/photoswipe.css';
 //@import (less) 'photoswipe/dist/default-skin/default-skin.css';
 @import "project.less";
 @import "fonts.less";
 @import "smart-grid.less";
-@import (less) 'owl.carousel2/dist/assets/owl.carousel.min.css';
-@import (less) 'owl.carousel2/dist/assets/owl.theme.default.min.css';
-@import (less) 'animate.css/animate.min.css';
+//@import (less) 'owl.carousel2/dist/assets/owl.carousel.min.css';
+//@import (less) 'owl.carousel2/dist/assets/owl.theme.default.min.css';
+//@import (less) 'animate.css/animate.min.css';
 /*замораживаю для гитхаба 3*/
 //@import  './../node_modules/photoswipe/dist/photoswipe.css';
 //@import  './../node_modules/photoswipe/dist/default-skin/default-skin.css';
@@ -942,6 +942,9 @@ h1 {
     .item {
       .col();
       .size(3);
+      .sm-block({ .size(12); .title-text {
+        margin-top: 24px;
+      } });
       flex-direction: column;
       .title-text {
         text-align: center;
@@ -1049,36 +1052,46 @@ h1 {
         padding-right: 3.5px;
         justify-content: space-around;
         margin-top: 24px;
+        margin-bottom: 24px;
         .yardage-item {
           width: calc(33% - 7px);
+          .xls-block({ width: calc(50% - 7px); });
+          .xss-block({ width: calc(100% - 7px); });
           margin-bottom: 7px;
-
           img {
             object-fit: cover;
             //height: 100%;
             width: 100%;
             height: 73px;
+            .sm-block({ height: 162px; });
             border: 0;
           }
 
         }
       }
       .social-icons {
-        .social-icon {
-          fill: @color_grey;
-          font-size: 40px;
+        display: flex;
+        padding-left: 3.5px;
+        padding-right: 3.5px;
+        justify-content: space-around;
 
-          a {
-            text-decoration: none;
-            color: @color_grey;
-            &:hover {
-              text-decoration: none;
-              color: @color_grey;
-            }
+        a {
+          text-decoration: none;
+          color: @color_grey;
+          /*padding-left: 7px;
+          padding-right: 7px;*/
 
+          .social-icon {
+            fill: #b4b4b4;
+            font-size: 28px;
           }
-
-
+          &:hover {
+            text-decoration: none;
+            .social-icon {
+              fill: @color_grey;
+              transition-duration: 0.4s;
+            }
+          }
         }
 
       }
