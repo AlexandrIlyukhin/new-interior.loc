@@ -1201,6 +1201,43 @@ h1 {
 
 }
 
+/*EXPLORE OUR PROJECTS*/
+
+/*Виды сотрудничества*/
+.our-options {
+  .wrapper();
+
+  .examples {
+    .row-flex();
+    .example {
+      .col();
+      .size(6);
+      display: flex;
+
+      .item {
+        width: calc(50% - 2.5px);
+        &:first-child {
+          margin-right: 2.5px;
+        }
+        &:last-child {
+          margin-left: 2.5px;
+        }
+/*TODO разобрвться с отступами*/
+        img {
+          object-fit: cover;
+          height: 100%;
+        }
+
+
+      }
+      .text-example {
+        background: @color_grey;
+      }
+    }
+  }
+
+}
+
 
 
 
