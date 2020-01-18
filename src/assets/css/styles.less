@@ -1,4 +1,4 @@
-//@import (less) 'normalize.css/normalize.css';
+////@import (less) 'normalize.css/normalize.css';
 /*замораживаю для гитхаба 1*/
 //@import (less) 'photoswipe/dist/photoswipe.css';
 //@import (less) 'photoswipe/dist/default-skin/default-skin.css';
@@ -1209,33 +1209,79 @@ h1 {
 
   .examples {
     .row-flex();
+
     .example {
       .col();
       .size(6);
       display: flex;
 
+      .lg-block({ .size(12); &:last-child {
+        margin-top: 5px;
+      } });
+      .xls-block({ //display: flex;
+        flex-direction: column; });
+
       .item {
         width: calc(50% - 2.5px);
-        &:first-child {
-          margin-right: 2.5px;
-        }
-        &:last-child {
-          margin-left: 2.5px;
-        }
-/*TODO разобрвться с отступами*/
+        .xls-block({ display: flex; width: 100%; });
         img {
           object-fit: cover;
           height: 100%;
         }
-
-
+      }
+      .img-example {
+        margin-right: 2.5px;
+        .xls-block({ margin-right: 0; margin-bottom: 5px; });
       }
       .text-example {
-        background: @color_grey;
+        background: #cbc4bd;
+        margin-left: 2.5px;
+        width: calc(50%);
+        .xls-block({ margin-left: 0; width: calc(100%); });
+        padding: 0 14px 40px;
+        display: flex;
+        flex-direction: column;
+        .consult_text {
+          font-family: 'Optima', sans-serif;
+          font-weight: 400;
+          color: @color_bg;
+          line-height: 35px;
+          margin-top: 60px;
+          margin-bottom: 40px;
+        }
+
+        ul {
+          list-style-type: square;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 25px;
+          color: @color_dark;
+          margin-bottom: 20px;
+
+          li {
+            list-style: inherit;
+            margin-left: 2rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        .btn-bloc {
+          margin: auto auto 0;
+          a {
+            text-decoration: none;
+            background: @color_bg;
+            //background: #dedede;
+            color: #777777;
+            &:hover {
+              border-color: #a2a2a2;
+              background: @color_bg;
+            }
+          }
+        }
       }
     }
   }
-
 }
 
 
