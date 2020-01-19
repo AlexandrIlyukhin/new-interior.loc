@@ -1,4 +1,4 @@
-////@import (less) 'normalize.css/normalize.css';
+//@import (less) 'normalize.css/normalize.css';
 /*замораживаю для гитхаба 1*/
 //@import (less) 'photoswipe/dist/photoswipe.css';
 //@import (less) 'photoswipe/dist/default-skin/default-skin.css';
@@ -1272,16 +1272,20 @@ h1 {
             text-decoration: none;
             background: @color_bg;
             //background: #dedede;
-            color: #777777;
+            color: @color_grey;
             &:hover {
-              border-color: #a2a2a2;
-              background: @color_bg;
+              border-color: @color_grey;
+              background: @color_grey;
+              color: @color_bg;
             }
           }
         }
       }
     }
   }
+  .xls-block({
+  margin-bottom: 60px;
+  });
 }
 
 
