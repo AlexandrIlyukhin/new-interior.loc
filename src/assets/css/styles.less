@@ -1287,7 +1287,7 @@ h1 {
 }
 
 /*Старт для неуверенных*/
-/*TODO сделать адаптив к форме неуверенного старта*/
+
 .sure-start {
   display: block;
   opacity: 1;
@@ -1307,18 +1307,21 @@ h1 {
     background: @color_bg;
     margin: 40px auto;
     padding: 28px 146px;
+    .lg-block({ padding: 28px 40px; });
     border-radius: 5px;
     border: 1px none #000000;
     display: flex;
     justify-content: center;
     width: 70%;
+    .xss-block({ width: 100%; });
     position: relative;
 
     .img-cooperator {
       display: flex;
       flex-direction: column;
-
+      margin-right: 20px;
       flex-grow: 1;
+      .xs-block({ display: none; });
 
       .img_wrapper {
 
@@ -1335,7 +1338,7 @@ h1 {
       margin-left: 2.5px;
       //.lg-block({ width: calc(55% - 2.5px); });
       //.sm-block({ width: calc(70% - 2.5px); });
-      //.xs-block({ width: calc(100%); margin: 0; });
+      .xs-block({ width: calc(100%); margin: 0; });
 
       .title-text {
         font-family: 'Optima', sans-serif;
@@ -1416,46 +1419,37 @@ h1 {
     }
 
     .cl-btn {
-
       width: 40px;
       height: 40px;
+      border-radius: 40px;
+      top: 20px;
+      right: 40px;
+      .lg-block({ top: 10px; right: 10px; });
       position: absolute;
       z-index: 1;
-      margin: 20px;
-      top: 0;
-      right: 0;
       cursor: pointer;
     }
     .cl-btn:before {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       content: '+';
-      color: rgb(198, 191, 188);
+      color: #c6bfbc;
       position: absolute;
       z-index: 2;
       transform: rotate(45deg);
       font-size: 50px;
       line-height: 1;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      border: 1px solid rgb(198, 191, 188);
+      top: -5px;
+      left: 6px;
       transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
     }
     .cl-btn:after {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      border-radius: 50%;
-      background: rgb(198, 191, 188);
-      border: 1px solid rgb(198, 191, 188);
+      border-radius: 100%;
+      background: #c6bfbc;
       z-index: 1;
       transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
       transform: scale(0.01);
