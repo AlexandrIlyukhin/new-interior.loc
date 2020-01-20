@@ -11,82 +11,26 @@ import $ from 'jquery';
 import 'owl.carousel2';
 
 
-/*window.onload = function (e) {
-    let images = document.images;
-    let images_total_count = images.length;
-    let images_loader_count = 0;
-    let preloadrer = document.getElementById('page-preloader');
-    let perc_display = document.getElementById('load-perc');
 
-
-    for (let i = 0; i < images_total_count; i++)
-    {
-        let image_clone = new Image();
-        image_clone.onload = image_loaded;
-        image_clone.onerror = image_loaded;
-        image_clone.src = images[i].src;
-    }
-
-    function image_loaded() {
-        images_loader_count++;
-        perc_display.innerHTML = (((100 / images_total_count) * images_loader_count) << 0) + '%';
-
-        if (images_loader_count >= images_total_count)
-        {
-            setTimeout(function () {
-                if (!preloadrer.classList.contains('done'))
-                {
-                    preloadrer.classList.add('done');
-                }
-            }, 1000);
-        }
-    };
-
-
-    ymaps.ready(init);
-
-    function init() {
-        var myMap = new ymaps.Map("map", {
-                center: [55.90168286, 37.62851714],
-                zoom: 15
-            }, {
-                searchControlProvider: 'yandex#search'
-            }),
-            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-            ),
-            myPlacemark = new ymaps.Placemark([55.90168286, 37.62851714], {
-                    // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
-                    balloonContentHeader: "ТЦ Нагорное",
-                    balloonContentBody: "Продажа отдельно стоящего здания. Общая площадь 1300 кв.м.",
-                    balloonContentFooter: "отдел продаж: (495) 1368831",
-                    hintContent: "Свой съезда на МКАД"
-                },
-                {
-                    // Опции.
-                    // Необходимо указать данный тип макета.
-                    iconLayout: 'default#imageWithContent',
-                    // Своё изображение иконки метки.
-                    iconImageHref: 'assets/img/ball.png',
-                    // Размеры метки.
-                    iconImageSize: [48, 52],
-                    // Смещение левого верхнего угла иконки относительно
-                    // её "ножки" (точки привязки).
-                    iconImageOffset: [-24, -24],
-                    // Смещение слоя с содержимым относительно слоя с картинкой.
-                    iconContentOffset: [15, 15],
-                    // Макет содержимого.
-                    iconContentLayout: MyIconContentLayout
-                }
-            );
-        myMap.geoObjects.add(myPlacemark);
-
-    }
-
-};*/
 
 
 $(document).ready(function () {
+
+    /*быстрый старт*/
+
+    if ($('.main').children().hasClass('sure-start')) {
+        let $sureStart = $('.sure-start');
+        let sure = function () {
+            $sureStart.slideDown(600);
+        };
+        setTimeout(sure, 6000);
+        /*Сокрытие формаы Неуверенный старт*/
+        let clBtn = $('.cl-btn');
+        clBtn.on('click', function () {
+            $sureStart.slideUp(600);
+        });
+    }
+
 
     /*Выпалающее меню*/
 
@@ -118,7 +62,7 @@ $(document).ready(function () {
     /*Динамически появяляющаяся стрелка при наличии контента*/
 
 
-    $taBl.each(function (i, elem) {
+    $taBl.each(function () {
         if ($(this).children('.nav-2').hasClass('nav-2')) {
 
         }
