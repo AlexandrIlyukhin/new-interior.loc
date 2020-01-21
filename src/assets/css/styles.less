@@ -1225,8 +1225,13 @@ h1 {
         width: calc(50% - 2.5px);
         .xls-block({ display: flex; width: 100%; });
         img {
-          object-fit: cover;
-          height: 100%;
+                    object-fit: cover;
+          height: 700px;
+          .lg-block({ height: 560px;});
+          .sm-block({height: 650px});
+          .xs-block({height: 672px});
+          .xls-block({height: 550px});
+
         }
       }
       .img-example {
