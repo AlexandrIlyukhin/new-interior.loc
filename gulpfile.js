@@ -232,7 +232,7 @@ function watch() {
         browserSync.init({
             server: {
                 baseDir: config.build,
-                index: 'packages.html'
+                index: 'portfolio.html'
             },
              //tunnel: true
         });
