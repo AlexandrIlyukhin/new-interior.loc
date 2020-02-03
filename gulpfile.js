@@ -22,6 +22,8 @@ const cached = require('gulp-cached');
 const svgmin = require('gulp-svgmin');
 const remember = require('gulp-remember');
 const svgSymbols = require('gulp-svg-symbols');
+/*let PhotoSwipe = require('photoswipe');
+let PhotoSwipeUIDefault = require('photoswipe/dist/photoswipe-ui-default');*/
 
 //const importsloader = require('imports-loader');
 
