@@ -1531,22 +1531,21 @@ h1 {
   /*Галлерея ссылок grid*/
   .grid-container {
     display: grid;
+    display: -ms-grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    -ms-grid-columns: 1fr 5px 1fr 5px  1fr 5px 1fr;
     grid-gap: 5px;
     align-items: start;
     justify-items: center;
     margin: auto;
-    //width: 504px;
+
 
     .gallery__item {
       position: relative;
       margin: 0;
       overflow: hidden;
 
-      /* &:nth-child(2) {
-         grid-column: span 3;
-         grid-row: span 3;
-       }*/
+
 
       .gallery__scoreboard {
         position: absolute;
@@ -1707,8 +1706,19 @@ h1 {
   /*Галлерея ссылок grid*/
   .grid-container {
     display: grid;
+    display: -ms-grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     grid-gap: 5px;
+    //-ms-grid-columns: (1fr);
+    -ms-grid-columns: 1fr 5px 1fr 5px  1fr 5px 1fr;
+    //-ms-grid-rows: 1fr 1em;
+    //-ms-grid-columns: (1fr (5px 1fr)[3]);
+    //display: -ms-grid;
+    //-ms-grid-columns: 1fr (20px 1fr)[4];
+    //-ms-grid-columns: repeat(4, 1fr);
+    //-ms-grid-rows: repeat(150px, 50px);
+    //-ms-grid-gap: 5px;
+
     //align-items: start;
     //justify-items: center;
    // margin: auto;
@@ -1716,6 +1726,7 @@ h1 {
 
     .gallery__item {
       // position: relative;
+      display: block;
       margin: 0;
       overflow: hidden;
       //width: 100%;
