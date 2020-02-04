@@ -79,8 +79,6 @@ let config = {
     }
 };
 
-
-
 let webConfig = {
 
     plugins: [
@@ -233,7 +231,7 @@ function watch() {
         browserSync.init({
             server: {
                 baseDir: config.build,
-                index: 'portfolio-page.html'
+                index: 'contact.html'
             },
              //tunnel: true
         });

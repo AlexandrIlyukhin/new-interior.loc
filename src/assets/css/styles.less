@@ -1338,8 +1338,6 @@ h1 {
       background: @color_bg;
       width: calc(50%);
       margin-left: 2.5px;
-      //.lg-block({ width: calc(55% - 2.5px); });
-      //.sm-block({ width: calc(70% - 2.5px); });
       .xs-block({ width: calc(100%); margin: 0; });
 
       .title-text {
@@ -1533,19 +1531,16 @@ h1 {
     display: grid;
     display: -ms-grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    -ms-grid-columns: 1fr 5px 1fr 5px  1fr 5px 1fr;
+    -ms-grid-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;
     grid-gap: 5px;
     align-items: start;
     justify-items: center;
     margin: auto;
 
-
     .gallery__item {
       position: relative;
       margin: 0;
       overflow: hidden;
-
-
 
       .gallery__scoreboard {
         position: absolute;
@@ -1710,7 +1705,7 @@ h1 {
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     grid-gap: 5px;
     //-ms-grid-columns: (1fr);
-    -ms-grid-columns: 1fr 5px 1fr 5px  1fr 5px 1fr;
+    -ms-grid-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;
     //-ms-grid-rows: 1fr 1em;
     //-ms-grid-columns: (1fr (5px 1fr)[3]);
     //display: -ms-grid;
@@ -1721,7 +1716,7 @@ h1 {
 
     //align-items: start;
     //justify-items: center;
-   // margin: auto;
+    // margin: auto;
     //width: 504px;
 
     .gallery__item {
@@ -1745,8 +1740,7 @@ h1 {
         img {
           object-fit: cover;
           height: 217px;
-          width: 100%;
-         ;
+          width: 100%;;
         }
       }
 
@@ -1756,13 +1750,13 @@ h1 {
       }*/
 
       /* for touch screen devices */
-     /* @media (hover: none) {
-        .gallery__scoreboard {
-          transform: scale(1) translate(0%, 0%);
-          opacity: 0.8;
-          background: #ffffff;
-        }
-      }*/
+      /* @media (hover: none) {
+         .gallery__scoreboard {
+           transform: scale(1) translate(0%, 0%);
+           opacity: 0.8;
+           background: #ffffff;
+         }
+       }*/
 
       &:hover {
         cursor: move;
@@ -1772,5 +1766,134 @@ h1 {
   }
 }
 
+/*страница контакт*/
+.contact-page {
+  .wrapper();
+  padding-top: 70px;
+  padding-bottom: 50px;
+  .projects {
+    font-family: 'Optima', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #423b38;
+    letter-spacing: 0;
+    line-height: 1.6;
+    font-size: 26px;
+    text-align: center;
+  }
+  .project {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #423b38;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+    //margin-top: 20px;
+    letter-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+}
 
+/*социальные иконки блок*/
+.social-top {
+
+  .wrapper();
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    color: @color_grey;
+    line-height: 3.5rem;
+    width: 3.5rem;
+    text-align: center;
+    /*padding-left: 7px;
+    padding-right: 7px;*/
+
+    .social-icon {
+      fill: #b4b4b4;
+      font-size: 1.5rem;
+    }
+    &:hover {
+      text-decoration: none;
+      .social-icon {
+        fill: @color_grey;
+        transition-duration: 0.4s;
+      }
+    }
+  }
+
+}
+
+/*секция карта контакт*/
+
+.map-contact {
+  .wrapper();
+  display: flex;
+  justify-content: center;
+  .lg-block({
+  flex-direction: column;
+  });
+  .map-big {
+    text-align: center;
+    flex-basis: calc(50%);
+    .lg-block({
+      flex-basis: calc(100%);;
+    });
+  }
+  .contact {
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    .lg-block({
+      margin-top: 20px;
+    });
+    .business-name {
+      font-family: 'Optima', sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      color: #423b38;
+      text-transform: none;
+      font-size: 30px;
+      line-height: 1.4;
+      letter-spacing: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .address, .phone, .mail {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 35px;
+      color: @color_grey;
+    }
+    .phone, .mail {
+      text-decoration: none;
+    }
+    .timetable {
+      .tbody {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 35px;
+        color: @color_grey;
+        .day, .time {
+          vertical-align: top;
+          padding: 0.6rem 1rem;
+          border-bottom: 1px solid;
+          border-color: #e8e5e1;
+          outline: none !important;
+        }
+
+      }
+    }
+
+  }
+}
