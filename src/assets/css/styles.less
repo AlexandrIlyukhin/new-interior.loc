@@ -1800,12 +1800,15 @@ h1 {
 .social-top {
 
   .wrapper();
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
 
   a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: @color_grey;
     line-height: 3.5rem;
@@ -1835,23 +1838,17 @@ h1 {
   .wrapper();
   display: flex;
   justify-content: center;
-  .lg-block({
-  flex-direction: column;
-  });
+  .lg-block({ flex-direction: column; });
   .map-big {
     text-align: center;
     flex-basis: calc(50%);
-    .lg-block({
-      flex-basis: calc(100%);;
-    });
+    .lg-block({ flex-basis: calc(100%); });
   }
   .contact {
     margin-left: 35px;
     display: flex;
     flex-direction: column;
-    .lg-block({
-      margin-top: 20px;
-    });
+    .lg-block({ margin-top: 20px; });
     .business-name {
       font-family: 'Optima', sans-serif;
       font-weight: normal;
@@ -1891,9 +1888,168 @@ h1 {
           border-color: #e8e5e1;
           outline: none !important;
         }
-
       }
     }
-
   }
 }
+
+/*О нас (наша история)*/
+.our-store {
+  .wrapper();
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  .sm-block({ flex-direction: column; });
+  .store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: calc(50%);
+    .sm-block({ flex-basis: calc(100%); &:last-child {
+      margin-top: 20px;
+    } });
+    .title, .text {
+      max-width: 420px;
+      align-items: center;
+    }
+    .title {
+      font-family: 'Optima', sans-serif;
+      font-weight: normal;
+      font-size: 22px;
+      color: @color_dark;
+    }
+    .text {
+      margin-top: 20px;
+      color: @color_dark;
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+}
+
+.complete-solutions {
+  .wrapper();
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  .text {
+    font-family: 'Optima', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: @color_grey;
+    max-width: 800px;
+    margin: auto;
+    line-height: 50px;
+  }
+  .sm-block({ display: none; });
+}
+
+/*Наш блог баннеры*/
+.our-blog {
+  .wrapper();
+  padding-top: 70px;
+  padding-bottom: 70px;
+  .projects {
+    font-family: 'Optima', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: @color_dark;
+    letter-spacing: 0;
+    font-size: 22px;;
+  }
+  .project {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #757171;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*Топ блог*/
+.top-blog {
+  .wrapper();
+  .items {
+    .row-flex();
+    .item {
+      .col();
+      .size(3);
+      .lg-block({ .size(4); });
+      .sm-block({ .size(12); margin-top: 0;});
+      &:last-child {
+        .lg-block({ .size(12); margin-top: 0; /* .scoreboard {
+          padding: 0.9em 1.5em;
+        }*/ });
+      }
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 5px;
+      //margin-top: 5px;
+      //background: @color_grey;
+      &:last-child {
+        border: 3px solid #d6d6d6;
+        .scoreboard {
+          opacity: 0.2;
+        }
+        .lg-block({ .scoreboard {
+          position: relative;
+          padding: 0.9rem 1.5rem;
+          letter-spacing: 0.06em;
+          font-family: 'Optima', sans-serif;
+          font-weight: normal;
+          font-size: 16px;
+          opacity: 0.8;
+          .address {
+            width: 100%;
+          }
+        } });
+
+        &:hover {
+          .lg-block({ background: @color_grey; });
+        }
+      }
+      .scoreboard {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        opacity: 0;
+        transition-duration: 0.3s;
+        padding: 2rem;
+        background: @color_bg;
+        font-size: 26px;
+        line-height: 1.40;
+        letter-spacing: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        text-align: center;
+        &:hover {
+          opacity: 0.8;
+        }
+        @media (hover: none){
+          opacity: 0.8;
+        }
+
+        .address {
+          text-decoration: none;
+          color: @color_dark_grey_cc;
+        }
+      }
+      img {
+        .sm-block({ width: 100%; object-fit: cover; });
+      }
+    }
+  }
+}
+
