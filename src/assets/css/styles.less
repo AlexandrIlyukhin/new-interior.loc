@@ -1979,17 +1979,22 @@ h1 {
       .col();
       .size(3);
       .lg-block({ .size(4); });
-      .sm-block({ .size(12); margin-top: 0;});
+      .sm-block({ .size(6); margin-top: 0; });
+
+      .xss-block({ .size(12); margin-top: 0; });
       &:last-child {
-        .lg-block({ .size(12); margin-top: 0; /* .scoreboard {
-          padding: 0.9em 1.5em;
-        }*/ });
+        .lg-block({ .size(12); margin-top: 0; });
+        .sm-block({ .size(6); });
+        .xss-block({ .size(12); margin-top: 0; });
       }
+    ;
+
       position: relative;
       overflow: hidden;
       margin-bottom: 5px;
       //margin-top: 5px;
       //background: @color_grey;
+
       &:last-child {
         border: 3px solid #d6d6d6;
         .scoreboard {
@@ -2034,10 +2039,12 @@ h1 {
         font-weight: normal;
         text-transform: uppercase;
         text-align: center;
+        .lg-block({ letter-spacing: 0.06em; font-family: 'Optima', sans-serif; font-weight: normal; font-size: 16px; });
+        .xss-block({ letter-spacing: 0; font-family: 'Open Sans', sans-serif; font-size: 26px; font-weight: normal; });
         &:hover {
           opacity: 0.8;
         }
-        @media (hover: none){
+        @media (hover: none) {
           opacity: 0.8;
         }
 
