@@ -2060,3 +2060,190 @@ h1 {
   }
 }
 
+/*ВНУТРЕННИЕ ДИЗАЙНЫ ВНУТРЕННЕГО ДИЗАЙНА*/
+
+/*Титул ВНУТРЕННИЕ ДИЗАЙНЫ ВНУТРЕННЕГО ДИЗАЙНА*/
+.interior-design {
+  .wrapper();
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+
+  .title {
+    text-align: center;
+    margin-top: 30px;
+    max-width: 70%;
+    line-height: 1.26;
+    letter-spacing: 0;
+    margin-bottom: 1.5rem;
+    color: @color_dark_grey_cc;
+    .xss-block({ font-size: 2rem; });
+
+  }
+
+}
+
+/*Дата публикации*/
+.date-transfer {
+  .wrapper();
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  .time {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    line-height: 35px;
+    color: @color_grey;
+  }
+}
+
+/*Секция публикации*/
+.section-transfer {
+  .wrapper();
+  display: flex;
+
+  h3 {
+    font-size: 30px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    margin-bottom: 1.5rem;
+    color: @color_dark_grey_cc;
+    font-family: 'Optima', sans-serif;
+    font-weight: normal;
+    text-transform: none;
+  }
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: @color_dark;
+    line-height: 35px;
+  }
+  .science-design {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(75%);
+    padding-right: 40px;
+    .text-gamble {
+      line-height: 35px;
+      margin-bottom: 35px;
+    }
+
+    .article {
+      .title {
+        margin-bottom: 56px;
+      }
+      .image-block {
+        display: flex;
+        margin: 0 -2.5px 56px;
+        .image {
+          margin: 0 2.5px;
+          width: 100%;
+          img {
+            object-fit: cover;
+            width: 100%;
+          }
+
+          a {
+            line-height: 35px;
+            color: @color_dark;
+            font-weight: bold;
+          }
+        }
+      }
+      .article_text {
+        //margin-top: 32px;
+        margin-bottom: 56px;
+      }
+    }
+
+    /*Общий итог*/
+    .snippet-box {
+      background: #F5F5F5;
+      color: #333333;
+      border: 1px solid #acacac;
+      .snippet-title {
+        display: block;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 700;
+        background: #e4e4e4;
+        border-bottom: 1px solid #acacac;
+        clear: both;
+        padding: .5em 1em;
+        width: 100%;
+      }
+
+      .box {
+        display: flex;
+        flex-basis: 80%;
+        padding-bottom: 35px;
+        .image-box {
+          display: flex;
+          flex-grow: 1;
+          img {
+            margin: 10px;
+            object-fit: cover;
+            max-height: 100px;
+          }
+        }
+        .all-info {
+          display: flex;
+          flex-direction: column;
+          flex-basis: calc(80%);
+
+          .snippet-wrapper {
+            display: flex;
+            .snippet-info_label {
+              width: 40%;
+              display: inline-block;
+              text-align: right;
+              font-size: 13px;
+              font-weight: 700;
+              margin: 0;
+              padding: .3em .5em;
+              vertical-align: top;
+              line-height: 35px;
+            }
+            .snippet-info_text {
+              width: 58%;
+              display: inline-block;
+              padding: .3em .5em;
+              vertical-align: top;
+              font-size: 13px;
+              line-height: 35px;
+              img {
+                width: 200px;
+              }
+            }
+            [data-up] {
+              text-transform: uppercase;
+            }
+
+
+          }
+          //background: red;
+
+        }
+
+      }
+    }
+
+    .social-icon {
+      /*TODO переместить социальные иконки согласно проекта и запраграмировать их добавление на страницу*/
+    }
+
+  }
+
+
+  .aside-design {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: @color_rgb_black;
+    height: 100px;
+  }
+}
