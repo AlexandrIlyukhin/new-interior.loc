@@ -324,6 +324,34 @@
                 </a>
             </div>
 
+            <section class="post-navigation">
+                <a href="" class="navigation-items">
+                    <div class="wrapper-svg">
+                        <svg class="navigation-item-arrow icon" role="presentation" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="assets/img/svg/svg-symbols.svg#back">
+                            </use>
+                        </svg>
+                    </div>
+                    <div class="navigation-items_text">
+                        <span class="navigation-item-meta">Следующая запись</span>
+                        <span class="navigation-item-title">ВНУТРЕННЕЕ РУКОВОДСТВО ПО ПРОЕКТИРОВАНИЮ ДЛЯ УСПЕШНОГО КОММЕРЧЕСКОГО ОФИСА</span>
+                    </div>
+                </a>
+                <a href="" class="navigation-items">
+                    <div class="wrapper-svg">
+                        <svg class="navigation-item-arrow icon" role="presentation" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="assets/img/svg/svg-symbols.svg#next">
+                            </use>
+                        </svg>
+                    </div>
+                    <div class="navigation-items_text">
+                        <span class="navigation-item-meta">Следующая запись</span>
+                        <span class="navigation-item-title">ВНУТРЕННЕЕ РУКОВОДСТВО ПО ПРОЕКТИРОВАНИЮ ДЛЯ УСПЕШНОГО КОММЕРЧЕСКОГО ОФИСА</span>
+                    </div>
+                </a>
+
+            </section>
+
         </div>
 
         <aside class="aside-design">
@@ -362,8 +390,6 @@
                                 </a>
                             </div>
                         </figure>
-                    </div>
-                    <div class="items">
                         <figure class="item">
                             <img src="assets/img/new_project1.jpg" alt="Столовая">
                             <figcaption class="item-text">ХОЛМЕЙСКИЙ ПАРК, ВЫСОТА N6</figcaption>
@@ -373,8 +399,6 @@
                                 </a>
                             </div>
                         </figure>
-                    </div>
-                    <div class="items">
                         <figure class="item">
                             <img src="assets/img/new_project1.jpg" alt="Столовая">
                             <figcaption class="item-text">ХОЛМЕЙСКИЙ ПАРК, ВЫСОТА N6</figcaption>
@@ -384,8 +408,6 @@
                                 </a>
                             </div>
                         </figure>
-                    </div>
-                    <div class="items">
                         <figure class="item">
                             <img src="assets/img/new_project1.jpg" alt="Столовая">
                             <figcaption class="item-text">ХОЛМЕЙСКИЙ ПАРК, ВЫСОТА N6</figcaption>
@@ -453,7 +475,8 @@
                         <span class="search-text">Поиск:</span>
                         <input type="search" class="search-field" placeholder="Поиск …" value="" name="s">
                     </label>
-                    <svg id="search-button" class="search-button icon" role="presentation" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="search-button" class="search-button icon" role="presentation"
+                         xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="assets/img/svg/svg-symbols.svg#serchbut">
                         </use>
                     </svg>
@@ -462,6 +485,42 @@
             <div class="widget-6">
                 <h3 class="vwidgettitle">Связаться с нами</h3>
                 <!--TODO Создать форму отправики-->
+                <form class="contact_form" action="" method="post" name="contact_form">
+                    <ul>
+                        <li>
+                            <legend class="title-text">Хотели бы Вы обсудить свой проект?</legend>
+                            <p class="required">Закажите бесплатную консультацию</p>
+                        </li>
+                        <li class="item">
+                            <input type="text" name="name" placeholder="Имя" required/>
+                        </li>
+                        <li class="item">
+                            <input type="text" name="email" placeholder="Эл. почта" required/>
+                        </li>
+                        <!--<li class="item">
+                            <input type="text" name="address" placeholder="Адрес объекта" required/>
+                        </li>-->
+                        <!--<li class="item">
+                            <span>Тип проекта</span>
+                        </li>
+                        <li class="item">
+
+                            <input id="check1" type="checkbox" name="check" value="check1" checked>
+                            <label for="check1">Жилой</label>
+                            <input id="check2" type="checkbox" name="check" value="check2">
+                            <label for="check2">Коммерческий</label>
+
+                        </li>-->
+                        <li class="item">
+                            <textarea name="message" cols="40" rows="6" placeholder="Сообщение" required></textarea>
+                        </li>
+                        <li class="item">
+                            <input class="submit" type="submit" value="Отправить">
+                        </li>
+                    </ul>
+
+
+                </form>
             </div>
         </aside>
     </section>
