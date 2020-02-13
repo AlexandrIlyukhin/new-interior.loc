@@ -2451,10 +2451,9 @@ h1 {
           justify-content: center;
           flex-basis: calc(50% - 5px);
 
-
-          .sm-block({flex-basis: calc(100%/3 - 5px);});
-          .xls-block({flex-basis: calc(50% - 5px);});
-          .xss-block({flex-basis: calc(100% - 5px);});
+          .sm-block({ flex-basis: calc(100% / 3 - 5px); });
+          .xls-block({ flex-basis: calc(50% - 5px); });
+          .xss-block({ flex-basis: calc(100% - 5px); });
           position: relative;
           margin: 2.5px;
           //overflow: hidden;
@@ -2622,6 +2621,74 @@ h1 {
         outline: none;
       }
 
+    }
+  }
+}
+
+/*Пресса Альмонах МЫ КАТЮША*/
+.press-almanac {
+  .wrapper();
+  .title-press {
+    font-family: 'Optima', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    margin: 79px 0 24px;
+    color: @color_dark_grey_cc;
+    font-size: 26px;
+  }
+
+  .press-important {
+    .row-flex();
+    .item {
+      .col();
+      .size(6);
+      background: #cac4be;
+      padding: 30px;
+      &:last-child {
+        padding: 0;
+      }
+      color: @color_grey;
+      .item_title {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        font-size: 28px;
+        line-height: 1.4;
+        margin-bottom: 0.7rem;
+        a {
+          text-decoration: none;
+          color: @color_bg;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+      }
+      .item_date {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 35px;
+        margin-bottom: 0.7rem;
+      }
+      .item_text {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 35px;
+      }
+      .item_img {
+        text-decoration: none;
+        display: block;
+        img {
+          object-fit: cover;
+        }
+      }
     }
   }
 }
