@@ -366,8 +366,38 @@ $(document).ready(function () {
 // execute above function
     initPhotoSwipeFromDOM('.grid-container');
 
+    /*let $proPlan = $('.project-plan .item');
+    console.log($proPlan);
 
 
+    var $btn = $('.btnUp');
+    var btOpen = false;
+    function onScroll (e) {
+        var pos = $(this).scrollTop();
+        if(!btOpen && pos > window.innerHeight){
+            btOpen = true;
+            $btn.fadeIn(500);
+
+        }
+        else if(btOpen && pos <= window.innerHeight){
+
+            btOpen = false;
+            $btn.fadeOut(500);
+            //console.log('hide')
+        }
+        console.log('SC');
+        for(var i = $links.length - 1; i >= 0; i--){
+            var $link = $links.eq(i);
+            var $header = $($link.attr('href'));
+            if(pos > $header.offset().top - 200){
+                $links.removeClass('active');
+                $link.addClass('active');
+                break;
+            }
+
+        }
+
+    }*/
 
 });
 

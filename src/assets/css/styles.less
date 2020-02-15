@@ -237,15 +237,18 @@ h1 {
     .xs-block({ background: rgba(198, 191, 188, 1); margin-bottom: 0; });
     .xxs-block({ padding: 0 40px 40px 20px; });
     .title-text {
+      font-family: 'Optima', sans-serif;
+      font-weight: normal;
+      font-style: normal;
       padding-top: 70px;
       line-height: normal;
     }
     .description {
-      font-size: 18px;
+      font-size: 26px;
       font-family: 'Open Sans', sans-serif;
       font-weight: normal;
       font-style: normal;
-      line-height: 20px;
+      line-height: 1.4;
       color: @color_dark;
       margin-top: 5vh;
       margin-bottom: 5vh;
@@ -2739,7 +2742,6 @@ h1 {
         font-size: 16px;
         line-height: 35px;
       }
-
     }
   }
 
@@ -2857,6 +2859,130 @@ h1 {
           .link-icon {
             fill: @color_bg;
           }
+        }
+      }
+    }
+  }
+}
+
+/*История замысла*/
+.design-color {
+  background: rgb(220, 217, 214);
+  .wrapper {
+    .wrapper();
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .items {
+      .row-flex();
+      .item {
+        .col();
+        .size(6);
+        .sm-block({ .size(12); &:first-child {
+          margin-bottom: 30px;
+        } });
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: @color_dark;
+        .title {
+          font-family: 'Optima', sans-serif;
+          font-weight: normal;
+          letter-spacing: 0;
+          max-width: 420px;
+          font-size: 22px;
+        }
+        .text {
+          font-family: 'Open Sans', sans-serif;
+          font-weight: normal;
+          max-width: 420px;
+          margin-top: 20px;
+          font-size: 15px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+
+}
+
+.our-process {
+
+  .wrapper();
+  margin-top: 70px;
+  margin-bottom: 35px;
+  color: @color_dark;
+  .title {
+    font-size: 22px;
+    font-family: 'Optima', sans-serif;
+    font-weight: normal;
+  }
+  .text {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    margin-top: 20px;
+    font-size: 26px;
+    line-height: 1.40;
+    color: #757171;
+  }
+}
+
+.project-plan {
+  .wrapper();
+  .items {
+    display: flex;
+    flex-direction: column;
+    .item {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-top: 50px;
+      .number {
+        flex-basis: calc(16%);
+        text-align: right;
+        margin-bottom: 15px;
+        font-family: 'Optima', sans-serif;
+        font-weight: normal;
+        font-size: 40px;
+        color: @color_grey;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        line-height: .9;
+      }
+      .project-block {
+        flex-basis: calc(34%);
+        padding-left: .5rem;
+        padding-right: .5rem;
+        .title {
+          font-family: 'Optima', sans-serif;
+          font-weight: normal;
+          font-size: 22px;
+          color: @color_dark_grey_cc;
+          text-align: left;
+        }
+        .text {
+          font-family: 'Open Sans', sans-serif;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 25px;
+          margin-top: 15px;
+          color: @color_dark;
+        }
+      }
+
+      .img__box {
+
+        margin-left: 5rem;
+        //margin-right: 2.5rem;
+        flex-basis: calc(50% - 5rem);
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+      &:nth-child(even) {
+        .img__box {
+          order: -1;
         }
       }
     }

@@ -231,7 +231,7 @@ function watch() {
         browserSync.init({
             server: {
                 baseDir: config.build,
-                index: 'blog.html'
+                index: 'designandbuild.html'
             },
              //tunnel: true
         });
