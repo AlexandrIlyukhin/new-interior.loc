@@ -9,6 +9,8 @@
 import $ from 'jquery';
 //import 'svgxuse';
 import 'owl.carousel2';
+import 'lazyloadxt/dist/jquery.lazyloadxt.js';
+/*TODO разобраться с подключением*/
 
 import * as PhotoSwipe from 'photoswipe';
 import * as PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
@@ -382,39 +384,13 @@ $(document).ready(function () {
         });
     });
 
+   /* let $laZy = $('.lazy');
+    console.log($laZy);
+    $laZy.lazyLoadXT({
+        effect : "fadeIn"
+    });*/
 
-    //let checkBoxes = false;
 
-
-    /*
-        var $btn = $('.btnUp');
-        var btOpen = false;
-        function onScroll (e) {
-            var pos = $(this).scrollTop();
-            if(!btOpen && pos > window.innerHeight){
-                btOpen = true;
-                $btn.fadeIn(500);
-
-            }
-            else if(btOpen && pos <= window.innerHeight){
-
-                btOpen = false;
-                $btn.fadeOut(500);
-                //console.log('hide')
-            }
-            console.log('SC');
-            for(var i = $links.length - 1; i >= 0; i--){
-                var $link = $links.eq(i);
-                var $header = $($link.attr('href'));
-                if(pos > $header.offset().top - 200){
-                    $links.removeClass('active');
-                    $link.addClass('active');
-                    break;
-                }
-
-            }
-
-        }*/
 
 });
 
