@@ -10,8 +10,6 @@ import $ from 'jquery';
 //import 'svgxuse';
 import 'owl.carousel2';
 import 'lazyloadxt/dist/jquery.lazyloadxt.js';
-/*TODO разобраться с подключением*/
-
 import * as PhotoSwipe from 'photoswipe';
 import * as PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
 
@@ -377,7 +375,7 @@ $(document).ready(function () {
                 checkBoxes = true;
                 $totSamy.addClass('animated pulse delay-1s');
             }
-            else if (checkBoxes &&((posItem - 600) >= pos) || (pos >= (posItem - 300))&&checkBoxes){
+            else if (checkBoxes &&((posItem - 700) >= pos) || (pos >= (posItem - 300))&&checkBoxes){
                 checkBoxes = false;
                 $totSamy.removeClass('animated pulse delay-1s');
             }

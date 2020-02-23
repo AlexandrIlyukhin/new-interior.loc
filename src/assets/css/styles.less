@@ -2937,6 +2937,9 @@ h1 {
       display: flex;
       flex-wrap: nowrap;
       margin-top: 50px;
+      .sm-block({
+      flex-direction: column;
+      });
       .number {
         flex-basis: calc(16%);
         text-align: right;
@@ -2985,6 +2988,14 @@ h1 {
           order: -1;
         }
       }
+      /*TODO Доработать адаптив страницы*/
+      .sm-block({
+        &:nth-child(even) {
+          .img__box {
+            order: 0;
+          }
+        }
+      });
     }
   }
 }
