@@ -2950,12 +2950,21 @@ h1 {
         color: @color_grey;
         padding-left: .5rem;
         padding-right: .5rem;
+        .sm-block({
+          padding-left: 0;
+          padding-right: 0;
+        });
         line-height: .9;
       }
       .project-block {
         flex-basis: calc(34%);
         padding-left: .5rem;
         padding-right: .5rem;
+        .sm-block({
+          flex-basis: calc(100%);
+          padding-left: 0;
+          padding-right: 0;
+        });
         .title {
           font-family: 'Optima', sans-serif;
           font-weight: normal;
@@ -2978,6 +2987,10 @@ h1 {
         margin-left: 5rem;
         //margin-right: 2.5rem;
         flex-basis: calc(50% - 5rem);
+        .sm-block({
+          margin-left: 0;
+          flex-basis: calc(100%);
+        });
         img {
           object-fit: cover;
           width: 100%;
