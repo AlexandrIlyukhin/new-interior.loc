@@ -7,7 +7,7 @@
 
 
 import $ from 'jquery';
-//import 'svgxuse';
+import 'svgxuse';
 import 'owl.carousel2';
 import 'lazyloadxt/dist/jquery.lazyloadxt.js';
 import * as PhotoSwipe from 'photoswipe';

@@ -410,6 +410,12 @@ h1 {
       .service-title {
         color: @color_bg;
         margin-bottom: 40px;
+
+      }
+      &:last-child {
+        .service-title {
+          visibility: hidden;
+        }
       }
       .service-text {
         color: @color_dark;
@@ -511,6 +517,7 @@ h1 {
 .space {
   .wrapper();
   .space-text {
+    text-transform: initial;
     max-width: 540px;
     margin: 110px auto;
     text-align: center;
@@ -621,6 +628,9 @@ h1 {
   margin: 0 auto;
   padding-left: 2.5px;
   padding-right: 2.5px;
+  .title {
+    display: none;
+  }
   .items {
     .row-flex();
   }
