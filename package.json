@@ -46,7 +46,7 @@
     "animate.css": "^3.7.2",
     "core-js": "^3.6.4",
     "formbouncerjs": "^1.4.6",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-validation": "^1.19.1",
     "lazyloadxt": "^1.1.0",
     "normalize.css": "^8.0.1",
