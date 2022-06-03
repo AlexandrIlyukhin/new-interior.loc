@@ -47,7 +47,7 @@
     "core-js": "^3.6.4",
     "formbouncerjs": "^1.4.6",
     "jquery": "^3.4.1",
-    "jquery-validation": "^1.19.1",
+    "jquery-validation": "^1.19.4",
     "lazyloadxt": "^1.1.0",
     "normalize.css": "^8.0.1",
     "owl.carousel2": "^2.2.1",
